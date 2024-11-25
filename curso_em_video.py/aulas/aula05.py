@@ -2,9 +2,9 @@ from os import system
 system ("cls")
 print()
 
-i = int(input("Inicio: "))
-f = int(input("Final: "))
-p = int(input("Passo: "))
-
-for c in range(i, f+1, p):
-    print(c)
+s = 0
+for c in range(0 ,3):
+    n = int(input("digita um numero inteiro "))
+    s = s + n
+    print(s)
+print("fim")
