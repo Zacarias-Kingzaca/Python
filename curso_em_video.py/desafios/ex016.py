@@ -1,7 +1,8 @@
 from os import system
+import math
 system ("cls")
 print()
 
 n = float(input("Digita um número: "))
 
-print(f"O valor digitado é {n} e a sua porção inteira é {n:.0f}")
+print("A porção inteir do  {} é {}: ".format(n, math.trunc(n)))
