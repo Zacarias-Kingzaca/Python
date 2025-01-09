@@ -2,14 +2,11 @@ from os import system
 system ("cls")
 print()
 
-nome = str(input("Digita o seu nome completo: ")).strip()
-print("Analisando seu nome...")
-print("Seu nome em maiscúlas é {}".format(nome.upper()))
-print("Seu nome em menúsculas é {}".format(nome.lower()))
-print("Seu nome tem ao todo {} letras ".format(len(nome) - nome.count('')))
-#print("Seu primeiro nome tem {} letras".format(nome.find('')))
-separa = nome.split()
 
-print("Seu primeiro nome é {} e tem {} letras".format(separa[0], len(separa[0])))
+nome = str (input("Digita o seu nome: ")).strip()
+print("Seu nome em maiúsculas é {}".format(nome.upper()))
+print("Seu nome em minúsculas é {}".format(nome.lower()))
+print("Seu nome ao todo tem {} letras".format(len(nome)))
 
-
+primeiro = nome.split()[0]
+print("Seu primeiro nome é {} e ele tem {} letras".format(primeiro,len(primeiro)))
