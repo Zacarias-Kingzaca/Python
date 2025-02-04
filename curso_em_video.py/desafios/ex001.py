@@ -1,5 +1,3 @@
-from os import system
-system ("cls")
-print()
 
+print()
 print("Olá mundo!")
