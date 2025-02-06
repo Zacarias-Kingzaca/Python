@@ -21,5 +21,5 @@ if n3 > n1 and n3 > n2:
     maior = n3
     
 print()
-print("O menor valor digitado foi {}".format(menor))
-print("O maior valor digitado foi {}".format(maior))
+print("O menor valor digitado foi \033[31m{}\033[m".format(menor))
+print("O maior valor digitado foi \033[32m{}\033[m".format(maior))
