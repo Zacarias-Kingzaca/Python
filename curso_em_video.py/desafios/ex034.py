@@ -5,7 +5,7 @@ print()
 salario = float(input("\033[1mFuncionário qual é o seu salário kzs:\033[m "))
 
 if salario <= 1250:
-    novo = salario + (salario * 15 / 100)
+    novo = salario + (salario * 5 / 100)
 else:
     novo = salario + (salario * 10 / 100)
 
