@@ -4,6 +4,11 @@ print()
 
 print("Calculos de números ímpares")
 
-n1 = int(input("Valor 1:"))
-n2 = int()
-\
+soma = 0
+i = 1
+for  i in  range (100):
+    if i % 2 != 0:
+     soma = soma + i
+print(soma)
+
+

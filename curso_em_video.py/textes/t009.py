@@ -3,5 +3,5 @@ system ("cls")
 print()
 
 palavra = input("Digita uma palavra: ")
-frase = palavra[0:]
-print(frase[:0]).
+invertida = palavra[::-1]
+print(invertida)
