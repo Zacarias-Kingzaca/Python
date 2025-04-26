@@ -6,3 +6,4 @@ frase = input("Digita uma frase: ").strip()
 contador = frase.split()
 palavras = len(contador)
 print(palavras)
+ 
