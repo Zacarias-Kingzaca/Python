@@ -3,4 +3,4 @@ from tkinter import messagebox
 
 def calcular_deslocamento():
     try:
-        v0 = float()
+        v0 = float ()
