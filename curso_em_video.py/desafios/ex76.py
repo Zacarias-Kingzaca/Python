@@ -20,4 +20,4 @@ for pos in range(0, len(materias_escolares)):
     if pos % 2 == 0:
      print(f"{materias_escolares[pos]:.<30}", end="")
     else:
-       print(f"kzs{materias_escolares[pos]:>10.2f}")
+       print(f"kzs{materias_escolares[pos]:>10.2f}") 
