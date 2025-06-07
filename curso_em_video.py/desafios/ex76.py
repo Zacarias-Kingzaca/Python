@@ -2,7 +2,6 @@ from os import system
 system("cls")
 print()
 
-
 materias_escolares = ( "Lápis", 50,
                        "Borracha", 80,
                        "Caderno",  250,
@@ -13,9 +12,9 @@ materias_escolares = ( "Lápis", 50,
                        "Caneta", 100,
                        "Livro", 1000,
                       )
-print(30*"-")  
-print(f"{"Lista de preços":^40}")
-print(30*"-")
+print(50*"-")  
+print(f"{"Lista de preços":^50}")
+print(50*"-")
 for pos in range(0, len(materias_escolares)):
     if pos % 2 == 0:
      print(f"{materias_escolares[pos]:.<30}", end="")
