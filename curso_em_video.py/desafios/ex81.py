@@ -8,13 +8,11 @@ while True:
     n = int(input("Digita um valor: "))
     lista.append(n)
     res = input("Quer continuar? (S/N): ")
-    if res in "nN":
-        break
-    else:
-        if res not in "sSnN":
-             res = input("Quer continuar? (S/N): ")
+    if res in "Nn":
+        break 
+print("="*40)        
 print(F"Você digitou {len(lista)} elementos.")
-print(f"Os valores em ordem decrescente são {lista[-1::]}"
+print(f"Os valores em ordem decrescente são {lista[::-1]}"
 )
 if 5 in lista:
     print("O valor 5 faz parte da lista.")
