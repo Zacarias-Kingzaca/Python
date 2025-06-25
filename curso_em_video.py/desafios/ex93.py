@@ -8,10 +8,8 @@ dados["nome"] = input("Nome do jogador: ")
 part = int(input(f"Quantas partidas o {dados["nome"]} jogou? "))
 for i in range(0, part):
     gols_marcados.append( int(input(f"     Quantos gols na partida {i}: ")))
-for g in gols_marcados:
-    total += g 
 dados["gols"] = gols_marcados[:]
-dados["total"] = total
+dados["total"] = sum(gols_marcados)
 print("-=-"* 30)
 print(dados)
 print("-=-"* 30)
