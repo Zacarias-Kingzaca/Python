@@ -13,7 +13,7 @@ def sorteia(lista):
         sleep(0.3)
     print('PRONTO!')
 
-
+ 
 def somaPar(lista):
     somap = 0 
     for i in lista:
@@ -25,3 +25,5 @@ def somaPar(lista):
 numeros = []
 sorteia(numeros) 
 somaPar(numeros)
+help
+
