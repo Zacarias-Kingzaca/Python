@@ -15,3 +15,8 @@ def dobro(n):
 def metade(n):
     res = n / 2
     return res
+
+
+def moeda(n):
+    res = f"{n:.2f}"
+    return res
