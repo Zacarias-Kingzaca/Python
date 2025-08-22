@@ -20,7 +20,7 @@ while True:
     
     if op not in ["1", "2", "3"]:
        system("cls")
-       print("\033[1;31mOpção inválida, espere 5 segundos para retornar ao menu.")
+       print("\033[1;31mOpção inválida, espere 5 segundos para retornar ao menu.\033[m")
        sleep(5)
        system("cls") 
     elif op == "1":
@@ -30,6 +30,7 @@ while True:
         print(f"{"\033[1mCADASTRAR ALUNO\033[m":^47}")
         print("\033[1;36m*\033[m"*40)
         cadastrar_aluno()
+        sleep(3)
         system("cls")
     elif op == "2":
         system("cls")

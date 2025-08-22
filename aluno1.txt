@@ -1,0 +1,18 @@
+Nome: João Buato
+Nº estudante: 1
+Nota1: 11.0
+Nota2: 11.0
+Situação: Aprovado
+==========================================
+Nome: Zacarias Eduardo João
+Nº estudante: 2
+Nota1: 14.0
+Nota2: 16.0
+Situação: Aprovado
+==========================================
+Nome: António Pedro
+Nº estudante: 3
+Nota1: 11.0
+Nota2: 19.0
+Situação Aprovado:
+==========================================

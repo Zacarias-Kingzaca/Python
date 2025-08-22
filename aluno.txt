@@ -1,26 +1,5 @@
-==========================================
-Nome: João Buato
-Nota1: 12
-Nota2: 12
-Situção: Aprovado
-==========================================
-Nome: Zacarias Eduardo João
-Nota1: 19.0
-Nota2: 20.0
-Situação: Aprovado
-==========================================
-Nome: Ana Pedro
-Nota1: 12.0
-Nota2: 1.0
-Situação: Reprovado
-==========================================
-Nome: Luisa Miguel
+Nome: Buato Pedro
 Nota1: 11.0
-Nota2: 11.0
-Situação: Aprovado
-==========================================
-Nome: Raimundo Alberto
-Nota1: 15.0
-Nota2: 19.0
+Nota2: 20.0
 Situação: Aprovado
 ==========================================
