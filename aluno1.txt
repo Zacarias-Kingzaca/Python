@@ -1,18 +1,30 @@
-Nome: João Buato
 Nº estudante: 1
-Nota1: 11.0
-Nota2: 11.0
+Nome: João Buato
+Nota1: 16.0
+Nota2: 13
 Situação: Aprovado
 ==========================================
-Nome: Zacarias Eduardo João
 Nº estudante: 2
+Nome: Zacarias Eduardo João
 Nota1: 14.0
 Nota2: 16.0
 Situação: Aprovado
 ==========================================
-Nome: António Pedro
 Nº estudante: 3
+Nome: Itamar Fashion
+Nota1: 2.0
+Nota2: 2.0
+Situação: Reprovado
+==========================================
+Nº estudante: 4
+Nome: Otiniel Manuel
 Nota1: 11.0
 Nota2: 19.0
-Situação Aprovado:
+Situação: Aprovado
+==========================================
+Nº estudante: 5
+Nome: Kaster Code
+Nota1: 12.0
+Nota2: 12.0
+Situação: Aprovado
 ==========================================

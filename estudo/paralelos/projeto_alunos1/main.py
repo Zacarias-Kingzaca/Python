@@ -1,8 +1,13 @@
 from os import system
 from uteis.cadastrar import cadastrar_aluno
 from uteis.boletim import consultar_boletim
+from uteis.remover import remover_aluno
+from uteis.retificar import retificar_dado
+from uteis.listar import lista
+from uteis.relatorio import geral
 from time import sleep
 from centralizar import center
+from op import operacao
 system("cls")
 print()
 
@@ -33,32 +38,40 @@ while True:
         sleep(1)
         system("cls")
         cadastrar_aluno()
-        while True:
-            per = input("Voltar para o menu? [Sim(s)/Não(n)]: ").strip().upper()
-            if per in ["SIM","S"]:
-                system("cls")
-                break
-            elif per in ["NÃO", "N"]:
-                system("cls")
-                exit()
-            else:
-                system("cls")
-                print("\033[1;31mErro digite apenas [Sim(s)/Não(n)].\033[m")
+        operacao()
 
-    if op ==  "2":
+    if op == "2":
         sleep(1)
         system("cls")
         consultar_boletim()
-        while True:
-            per = input("Voltar para o menu? [Sim(s)/Não(n)]: ").strip().upper()
-            if per in ["SIM","S"]:
-                system("cls")
-                break
-            elif per in ["NÃO", "N"]:
-                system("cls")
-                exit()
-            else:
-                system("cls")
-                print("\033[1;31mErro digite apenas [Sim(s)/Não(n)].\033[m")
-    if op ==  "7":
+        operacao()
+    
+    if op == "3":
+        sleep(1)
+        system("cls")
+        retificar_dado()
+        operacao()
+    
+    if op == "4":
+        sleep(1)
+        system("cls")
+        remover_aluno()
+        operacao()
+
+    if op == "5":
+        sleep(1)
+        system("cls")
+        lista()
+        operacao()
+
+    if op == "6":
+        sleep(1)
+        system("cls")
+        geral()
+        operacao()
+
+    if op == "7":
+        sleep(1)
+        system("cls")
         break
+    

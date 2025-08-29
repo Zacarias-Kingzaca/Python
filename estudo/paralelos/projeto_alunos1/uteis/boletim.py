@@ -10,7 +10,6 @@ def consultar_boletim():
     center("\033[1;35m      =========================================\033[m")
     print()
 
-
     while True:
         try:
             n_estudante = int(input("Nº estudante: ").strip())
@@ -30,12 +29,18 @@ def consultar_boletim():
                    bloco.append(linha)
                    if "Situação" in linha:
                         for item in bloco:
-                             if f"Nº estudante: {n_estudante}" in item:
+                             if f"Nº estudante: {n_estudante}".strip() in item:
+                                  system("cls")
+                                  print("\033[1;32mProcurando...\033[m")
+                                  sleep(2)
+                                  system("cls")
                                   print("".join(bloco))
                                   mostrar_boletim = True
                                   break
-              bloco = [] 
+                        bloco = [] 
+                        if mostrar_boletim:
+                         break
               if not mostrar_boletim:
-                   print("Estudante não encontrado")           
+                   print("\033[1;31mEstudante não encontrado\033[m")           
     except:
             print("\033[1;31mConexão não establecida com A Base de dados.\033[m")

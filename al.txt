@@ -1,15 +1,24 @@
-Nome: João Buato
-Nota1: 11.0
-Nota2: 20.0
+Nome: Zacarias Eduardo João
+Nº estudante: 2
+Nota1: 14.0
+Nota2: 16.0
 Situação: Aprovado
 ==========================================
-Nome: Buato Pedro
-Nota1: 11.0
-Nota2: 20.0
-Situação: Aprovado
+Nome: Itamar Dos Santos
+Nº estudante: 3
+Nota1: 1.0
+Nota2: 1.0
+Situação: Reprovado
 ==========================================
-Nome: João Beto
+Nome: Carlos Daniel
+Nº estudante: 4
+Nota1: 2.0
+Nota2: 2.0
+Situação: Reprovado
+==========================================
+Nome: Otiniel Manuel
+Nº estudante: 5
 Nota1: 11.0
-Nota2: 20.0
+Nota2: 19.0
 Situação: Aprovado
 ==========================================

@@ -4,8 +4,6 @@ from time import sleep
 system("cls")
 print()
 
-class AlunoExisteError(Exception):
-     pass
 
 def cadastrar_aluno():
     center("\033[1;35m      =========================================\033[m")
@@ -21,7 +19,9 @@ def cadastrar_aluno():
                 sleep(1)
                 system("cls")
                 print("\033[1;31mO nome não pode conter números nem símbolos.\033[m")
-    while True:       
+     
+    while True:
+                   
             try:
                  num = int(input("Nº de estudante: ").strip())
             except:
@@ -54,8 +54,8 @@ def cadastrar_aluno():
                                                         
     while True:
          try:
-              n1 = float(input("Nota1: "))
-              n2 = float(input("Nota2: "))
+              n1 = float(input("Nota1: ").strip())
+              n2 = float(input("Nota2: ").strip())
          except:        
             print("\033[1;31mErro introduz apenas números.\033[m")
          else:
@@ -69,9 +69,9 @@ def cadastrar_aluno():
 
     try:
         with open("aluno1.txt", "a", encoding="UTF-8") as arquivo:
-            arquivo.write(f"Nome: {nome}\nNº estudante: {num}\nNota1: {n1}\nNota2: {n2}\nSituação {situacao}:\n")
+            arquivo.write(f"Nº estudante: {num}\nNome: {nome}\nNota1: {n1}\nNota2: {n2}\nSituação: {situacao}\n")
             arquivo.write(f"==========================================\n")
             print("\033[1;32mCadastrado com sucesso!\033[m")
             sleep(2)
-    except FileNotFoundError:
+    except:
             print("\033[mErro impossível cadastrar, arquivo não encontrado.")
