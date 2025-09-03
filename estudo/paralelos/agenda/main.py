@@ -1,25 +1,48 @@
 from os import system
-from time import sleep
+from apaga import apagar_contato
+from op import operacao
 from nova import nova_tarefa
+from lista import listar_contato
+from busca import buscar_por_nome
+
 system("cls")
 print()
-
-print("==================AGENDA DE TAREFA==================")
-
-print("1 - NOVA TAREFA")
-print("2 - LISTAR TAREFAS")
-print("3 - APAGAR TAREFA")
-print("4 - SAIR")
-print()
-op = input("OPÇÃO: ").strip()
-
 while True:
-    if op not in ["1", "2", "3", "4"]:
+    print("==================AGENDA DE CONTATOS==================")
+
+    print("1 - NOVO CONTATO")
+    print("2 - LISTAR CONTATOS")
+    print("3 - BUSCAR POR NOME")
+    print("4 - APAGAR CONTATO")
+    print("5 - SAIR")
+    print()
+    op = input("OPÇÃO: ").strip()
+    
+    if op not in ["1", "2", "3", "4", "5"]:
         print(f"\033[1;31m{op} não é uma opção válida.\033[m")
         op = input("OPÇÃO: ").strip()
     else:
-        break
-    if op == "1":
+     
+     if op == "1":
         system("cls")
         nova_tarefa()
-        break
+        operacao()
+
+    if op == "2":
+       system("cls")
+       listar_contato()
+       operacao()
+
+    if op == "3":
+       system("cls")
+       buscar_por_nome()
+       operacao()
+
+    if op == "4":
+       system("cls")
+       apagar_contato()
+       operacao()
+
+    if op == "5":
+       system("cls")
+       break        

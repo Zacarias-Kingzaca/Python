@@ -5,7 +5,7 @@ print()
 
 nomo_a_apagar = input("Nome: ").strip().title()
 
-with open("al.txt", "r", encoding="UTF-8") as f:
+with open("contatos.txt", "r", encoding="UTF-8") as f:
     linhas = f.readlines()
 novo_conteudo = []
 remover_bloco = False
@@ -18,7 +18,7 @@ for linha in linhas:
             remover_bloco = False
     if not remover_bloco:
         novo_conteudo.append(linha)
-with open("al.txt", "w", encoding="UTF-8") as f:
+with open("contatos.txt", "w", encoding="UTF-8") as f:
     f.writelines(novo_conteudo)
 
 if remover_bloco == True:
