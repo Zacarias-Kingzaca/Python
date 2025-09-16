@@ -26,7 +26,7 @@ def adicionar_filme(lista):
 
 def listar_filmes_por_genero(lista):
     print("="*30)
-    print(f"{"Lista de fimes":^30}")
+    print(f"{"Lista de filmes":^30}")
     print("="*30)
     bloco = []
     genero = input("Gênero: ").strip().upper()
@@ -35,17 +35,30 @@ def listar_filmes_por_genero(lista):
           bloco.append(filme)
     if bloco:
         for i in bloco:
-            print(f"Título: f{["titulo"]} | Ano: {["ano"]} | Gênero: {["genero"]}")
+            for i,j in i.items():
+                print(f"{i}: {j}")
+            print("========================")
     else:
         print("Nenhum filme encontrado com este gênero.")
 
 
+
 def listar_filmes_por_ano(lista):
     print("="*30)
-    print(f"{"Lista de fimes":^30}")
+    print(f"{"Lista de filmes":^30}")
     print("="*30)
     bloco = []
     ano = int(input("Ano: ").strip())
+    for filme in lista:
+        if filme["Ano"] == ano:
+            bloco.append(filme)
+    if bloco:
+            for i in bloco:
+                for i,j in i.items():
+                    print(f"{i}: {j}")
+                print("========================")
+    else:
+        print("Nenhum filme encontrado com este ano.")
 
 
 while True:
@@ -72,3 +85,12 @@ while True:
         system("cls")
         listar_filmes_por_genero(filmes)
         operacao()
+    
+    if op == "3":  
+        system("cls")
+        listar_filmes_por_ano(filmes)
+        operacao()
+    
+    if op == "4":  
+        system("cls")
+        break
