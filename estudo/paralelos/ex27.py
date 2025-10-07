@@ -8,52 +8,72 @@ class Filme:
         self.genero = genero
         self.avaliacoes = avaliacoes
 
-    
-    def media_avaliacões(self):
-      if self.avaliacoes:
-         return  sum(self.avaliacoes) / len(self.avaliacoes)
-      return 0
+    def media_avaliacoes(self):
+        if self.avaliacoes:
+          sum(self.avaliacoes) / len(self.avaliacoes)
+        return 0
+         
 
-    
 class Catalogo:
-   def __init__(self):
-      self.filmes = []
+    def __init__(self):
+        self.filmes = []
 
-   def adicionar_filme(self,filme):
-      encontrou = True
-      for f in self.filmes:
-         if f.titulo.lower() == filme.titulo.lower():
-            encontrou = True
-            break
-         if not encontrou:
-            self.filmes.append(filme)
-            print("\033[1;31mFilme adicionado com sucesso!\033[m")
-         else:
-            print("\033[1;31mEste Filme já está cadastrado!\033[m")
- 
+    def adicionar_filme(self, filme):
+        for f in self.filmes:
+            if f.titulo.lower() == filme.titulo.lower():
+                print("\033[1;31mEste filme já cadastrado.\033[m")
+                return
+        self.filmes.append(filme) 
+        print("\033[1;32mFilme adicionado com sucesso!\033[m")
 
-   def listar_por_genero(self, genero):
+    def listar_genero(self, genero):
+        encontrou = False
+        for f in self.filmes:
+            if f.genero.lower() == genero.lower():
+                print(f"\nTitulo: {f.titulo}")
+                print(F"Gênero: {f.genero}")
+                print(f"Avaliações: {f.avaliacoes}")
+                encontrou = True
+        if not encontrou:
+            print("\033[1;31mNenhum filme desse gênero encontrado.\033[m")
 
-      for f in self.filmes:
-          if f.genero.lower() == genero.lower():
-            (f"Titulo: {f.titulo}\n Gênero: {f.genero}\n Avaliacões: {f.avaliacoes}\n")
-            print("=======================================")
-          else:
-             print("\033[1;31mNenhum filme desse gênero encontrado.\033[m")
-
-   def filme_com_maior_avaliacao(self):
-        return max(self.filmes, key=lambda a: a.media_avaliacoes())
+    def  filme_com_maior_avaliacoes(self):
+        if self.filmes:
+            return max(self.filmes, key=lambda a: a.media_avaliacoes())
+        return None
     
 
-F = Catalogo()
+catalogo = Catalogo()
 
-f1 = Filme("Jack chan", "Comedia", [10, 7, 9])
-f2 = Filme("Mr Bean", "Comedia", [10, 9, 9])
-f3 = Filme("Biladen", "Acção", [10, 10, 9])
+while True:
+    print("\n1 - Adicionar Filme")
+    print("2 - Listar por Gênero")
+    print("3 - Listar Avaliado")
+    print("0 - Sair")
+    op = input("Escolha: ")
 
-F.adicionar_filme(f1)
-F.adicionar_filme(f1)
-F.adicionar_filme(f1)
+    if op == "1":
+        titulo = input("Título do filme: ")
+        genero = input("Gênero do filme: ")
+        avaliacoes = list(map(float, input("Digita 3 notas separadas por espaço: ").split()))
+        f = Filme(titulo, genero, avaliacoes)
+        catalogo.adicionar_filme(f)
 
-F.listar_por_genero("Comediia")
+    elif op == "2":
+        genero = input("Qual gênero deseja listar? ")
+        catalogo.listar_genero(genero)
 
+    elif op == "3":
+        melhor = catalogo.filme_com_maior_avaliacoes()
+        if melhor:
+            print(f"\nMelhor filme: {melhor.titulo} com {melhor.media_avaliacoes():.2f}")
+        else:
+            print("Nenhum filme cadastrado.")
+            
+    elif op == "0":
+        break
+    
+    else:
+        print("Opção inválida")
+
+    
