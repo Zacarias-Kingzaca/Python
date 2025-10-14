@@ -32,9 +32,12 @@ class ListaDEtarefas:
         encontrou = False
         for i in self.tarefas:
             if i.nome.lower() == nome.lower():
-                encontrou == True
+                encontrou = True
                 if i.concluida == False:
-                    i.concluida == True
+                    i.concluida = True
+                    print("Tarefa concluida!")
+                elif i.concluida == True:
+                    print("A tarefa já foi concluida!")
         if not encontrou:
             print("Nenhuma tarefa encontrada")
 

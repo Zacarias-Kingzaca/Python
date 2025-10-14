@@ -10,7 +10,7 @@ class Filme:
 
     def media_avaliacoes(self):
         if self.avaliacoes:
-          sum(self.avaliacoes) / len(self.avaliacoes)
+         return sum(self.avaliacoes) / len(self.avaliacoes)
         return 0
          
 
