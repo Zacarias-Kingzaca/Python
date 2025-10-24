@@ -4,7 +4,7 @@ print()
 lanche = "Hambúrguer", "Suco", "Pizza", "Pudim", "Bata frita"
 
 #for cont in range(0, len(lanche)):
-#    print(f"Eu vou comer {lanche[cont]} na posição {cont}")
+#print(f"Eu vou comer {lanche[cont]} na posição {cont}")
 #print("Comi de uma forma fixe!")
 #for pos,  comida in enumerate(lanche):
 #  print(f"Eu vou comer {comida}")
@@ -18,4 +18,3 @@ b = 2, 4, 7
 c = a + b
 print(c)
 print(c.index(2,2))
-   

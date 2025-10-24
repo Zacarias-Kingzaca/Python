@@ -1,3 +1,4 @@
+
 from os import system
 from random import randint
 system("cls")
