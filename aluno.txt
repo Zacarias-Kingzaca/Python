@@ -1,5 +1,0 @@
-Nome: Buato Pedro
-Nota1: 11.0
-Nota2: 20.0
-Situação: Aprovado
-==========================================
