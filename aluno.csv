@@ -1,4 +1,5 @@
-Nome                     Idade
-Zacarias Eduardo João    18
-Larisío Machado          19
-João Buato               18
+['Nome         Idade           Nota           Média ']
+['Zacarias      19      '],"[10.0, 10.0]",[10.0]
+['Pedro         18      '],"[10.0, 4.0]",[7.0]
+['Ana           20      '],"[10.0, 3.0]",[6.5]
+['Luisa         17      '],"[10.0, 5.0]",[7.5]
