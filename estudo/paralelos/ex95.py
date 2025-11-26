@@ -1,15 +1,24 @@
 from os import system
+from random import randint
+from time import sleep
+from operator import itemgetter
 system("cls")
 print()
 
-aluno = {}
+jogador = {
+    "Jogador1": randint(1, 6),
+    "Jogador2": randint(1, 6),
+    "Jogador3": randint(1, 6),
+    "Jogador4": randint(1, 6)
+ }
 
-aluno["nome"] = str(input("Nome do aluno: ").title())
-aluno["média"] = float(input("Média do aluno: "))
-if aluno["média"] >= 7:
-    aluno["situação"] = "Aprovado"
-else:
-    aluno["situação"] = "Reprovado"
+for k, v in jogador.items():
+    print(f"Jogador {k} tirou {v} no dado.")
+    sleep(2)
+nova = sorted(jogador.items(), key=itemgetter(1), reverse=True)
+print("-=" * 30)
+print("== RANKING DOS JOGADORES ==")
+for k, v in enumerate(nova):
+    print(f" {k + 1 }º Lugar:  {v[0]} com {v[1]}")
+print(nova[2])
 
-for k,v  in aluno.items():
-    print(f"{k} é igual a {v}")
