@@ -4,7 +4,7 @@ system("cls")
 print()
 
 senha = input("E-mail: ")
-padrao = re.search(r"^[-]+@[-]+2,", senha)
+padrao = re.search(r"^\w+@\w+\.(.)", senha)
 if padrao:
     print("E-mail válido")
 else:
